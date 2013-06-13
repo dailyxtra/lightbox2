@@ -1085,20 +1085,20 @@ Lightbox = {
     if (!styles) return item;
     var stylesArray = styles.split(';');
     for (var i = 0; i< stylesArray.length; i++) {
-      if (stylesArray[i].indexOf('width:') >= 0) {
-        var w = stylesArray[i].replace('width:', '');
+      if (stylesArray[i].indexOf('width=') >= 0) {
+        var w = stylesArray[i].replace('width=', '');
         item.width = jQuery.trim(w);
       }
-      else if (stylesArray[i].indexOf('height:') >= 0) {
-        var h = stylesArray[i].replace('height:', '');
+      else if (stylesArray[i].indexOf('height=') >= 0) {
+        var h = stylesArray[i].replace('height=', '');
         item.height = jQuery.trim(h);
       }
-      else if (stylesArray[i].indexOf('scrolling:') >= 0) {
-        var scrolling = stylesArray[i].replace('scrolling:', '');
+      else if (stylesArray[i].indexOf('scrolling=') >= 0) {
+        var scrolling = stylesArray[i].replace('scrolling=', '');
         item.scrolling = jQuery.trim(scrolling);
       }
-      else if (stylesArray[i].indexOf('overflow:') >= 0) {
-        var overflow = stylesArray[i].replace('overflow:', '');
+      else if (stylesArray[i].indexOf('overflow=') >= 0) {
+        var overflow = stylesArray[i].replace('overflow=', '');
         item.overflow = jQuery.trim(overflow);
       }
     }
